@@ -1,0 +1,30 @@
+ManifestFileVersion: 0
+CRC: 2854425544
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: d47c7202f5dedea424e6c8a66cb1ab14
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 416cf1c9a539d7380605ed52b1d91266
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 198
+  Script: {instanceID: 0}
+- Class: 199
+  Script: {instanceID: 0}
+Assets:
+- Assets/Export/ParticleOnAvatar.prefab
+Dependencies: []

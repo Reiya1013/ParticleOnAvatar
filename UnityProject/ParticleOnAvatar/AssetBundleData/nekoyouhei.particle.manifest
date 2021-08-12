@@ -1,0 +1,28 @@
+ManifestFileVersion: 0
+CRC: 2432140427
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 9a7184daec352233a7d5b04dbd199d56
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 6190798dd7fe08a5151fea2229814362
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 198
+  Script: {instanceID: 0}
+- Class: 199
+  Script: {instanceID: 0}
+Assets:
+- Assets/Export/Nekoyouhei.prefab
+Dependencies: []

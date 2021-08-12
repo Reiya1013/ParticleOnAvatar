@@ -1,0 +1,18 @@
+﻿<bg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://monkeymanboy.github.io/BSML-Docs/ https://raw.githubusercontent.com/monkeymanboy/BSML-Docs/gh-pages/BSMLSchema.xsd">
+  <vertical pad-top="5" preferred-width="60" child-control-height="false" child-expand-height="false">
+    <vertical pad-bottom='0' pad-top='2' spacing='1' vertical-fit="PreferredSize" >
+      <text text='ParticleList' align='Center' font-size='4'/>
+      <page-button event-click='ParticleList#PageUp' direction='Up' />
+      <list id='ParticleList' visible-cells='4' expand-cell='true' select-cell='ParticleSelect' />
+      <page-button event-click='ParticleList#PageDown' direction='Down' />
+    </vertical>
+  </vertical>
+  
+
+  <vertical pad-top="60" preferred-width="60" child-control-height="false" child-expand-height="false">
+    <horizontal bg='panel-top' pad-left='10' pad-right='10' horizontal-fit='PreferredSize'>
+      <button preferred-width="40" preferred-height="12" text="Set Particle" on-click="SetParticle"/>
+      <button preferred-width="40" preferred-height="12" text="Clear" on-click="Clear"/>
+    </horizontal>
+  </vertical>
+</bg>

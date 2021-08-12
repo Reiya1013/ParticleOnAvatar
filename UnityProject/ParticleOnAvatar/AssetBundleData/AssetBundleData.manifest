@@ -1,0 +1,10 @@
+ManifestFileVersion: 0
+CRC: 4107066316
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: particle.particle
+      Dependencies: {}
+    Info_1:
+      Name: nekoyouhei.particle
+      Dependencies: {}
