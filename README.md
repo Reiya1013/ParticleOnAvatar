@@ -16,6 +16,11 @@
 ![image](https://user-images.githubusercontent.com/62868883/129211742-0647ac14-69be-4a1f-b5ea-2c59f44f3142.png)
 
 3.LeftHand/RightHand/LeftFoot/RightFootに追加したいParticleを設定します。  
+※注意！！   
+　使用Particleによっては光る場合があります。  
+　その場合は、MaterialChangeに付属のBeatSaber専用シェーダーを使用するか、ご相談ください。  
+  かんたんな対応で行けそうなものはサクッと対応シェーダー化いたします。  
+
 4.Particleの位置を微調整したい場合は以下Objectの位置を変更してください。  
 ![image](https://user-images.githubusercontent.com/62868883/129212326-ad231fd1-0c7c-48cd-9376-a74eca0e4353.png)
 
