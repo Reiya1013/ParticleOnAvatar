@@ -13,7 +13,7 @@ using VRM;
 
 namespace ParticleOnAvatar
 {
-    class ParticleOnAvatar
+    class ParticleOnAvatar : MonoBehaviour
     {
         UnityEngine.Object[] AssetsParticle;
         GameObject ParticleObject;
@@ -72,7 +72,7 @@ namespace ParticleOnAvatar
 
         }
 
-
+        bool SetupFlg = false;
         /// <summary>
         /// VRM取得して、Danceモーションのセット
         /// </summary>
@@ -89,6 +89,11 @@ namespace ParticleOnAvatar
             if (VRM == null) yield break;
 
             SetParticle();
+        }
+
+        public void LateUpdate()
+        {
+
         }
 
         /// <summary>
@@ -129,6 +134,10 @@ namespace ParticleOnAvatar
             if (rightFoot)
                 SetRigParticle(ani, HumanBodyBones.RightFoot, rightFoot);
 
+            var world = ParticleObject.transform.Find("World");
+            if (world)
+                SetWorldParticle(ani, world);
+
             //コピー元を非アクティブ化
             ParticleObject.SetActive(false);
         }
@@ -140,12 +149,31 @@ namespace ParticleOnAvatar
             var setObj = GameObject.Instantiate(SetObj.gameObject, Vector3.zero, Quaternion.identity, rig);
             SetParticles.Add(setObj);
             //ずれるので戻す
-            setObj.transform.localPosition = Vector3.zero;
+            setObj.transform.localPosition = SetObj.transform.position;
             //スケールをコピー
             setObj.transform.localScale = VRM.transform.localScale;
 
             //オブジェクト自体はコピー用のオブジェクト格納なので非アクティブにしておく
             SetObj.gameObject.SetActive(false);
+
+        }
+
+        private void SetWorldParticle(Animator animator, Transform SetObj)
+        {
+            //Worldにセットする
+            var setObj = GameObject.Instantiate(SetObj.gameObject, Vector3.zero, Quaternion.identity);
+            SetParticles.Add(setObj);
+            //ずれるので戻す
+            setObj.transform.localPosition = SetObj.transform.localPosition;
+            //スケールをコピー
+            setObj.transform.localScale = VRM.transform.localScale;
+            //デストロイされないようにする
+            DontDestroyOnLoad(setObj);
+
+            //オブジェクト自体はコピー用のオブジェクト格納なので非アクティブにしておく
+            SetObj.gameObject.SetActive(false);
+
+            Logger.log?.Debug($"SetParticle World {setObj.name}");
 
         }
 
